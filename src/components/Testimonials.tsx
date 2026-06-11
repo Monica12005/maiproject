@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
 const testimonials = [
   {
@@ -31,7 +31,7 @@ const testimonials = [
 ];
 
 // Left side animation (slides from left)
-const leftVariant = {
+const leftVariant: Variants = {
   hidden: { opacity: 0, x: -80 },
   visible: {
     opacity: 1,
@@ -46,7 +46,7 @@ const leftVariant = {
 };
 
 // Right side animation (slides from right, with stagger for cards)
-const rightContainerVariant = {
+const rightContainerVariant: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -57,7 +57,7 @@ const rightContainerVariant = {
   },
 };
 
-const rightCardVariant = {
+const rightCardVariant: Variants = {
   hidden: { opacity: 0, x: 100 },
   visible: {
     opacity: 1,

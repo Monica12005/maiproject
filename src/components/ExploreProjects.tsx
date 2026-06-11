@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
 const projects = [
   {
@@ -43,7 +43,7 @@ const projects = [
 ];
 
 // Animation variants
-const headingContainerVariants = {
+const headingContainerVariants: Variants = {
   hidden: {},
   visible: {
     transition: {
@@ -52,7 +52,7 @@ const headingContainerVariants = {
   },
 };
 
-const slideFromLeftVariant = {
+const slideFromLeftVariant: Variants = {
   hidden: { opacity: 0, x: -80 },
   visible: {
     opacity: 1,
@@ -66,7 +66,7 @@ const slideFromLeftVariant = {
   },
 };
 
-const cardContainerVariants = {
+const cardContainerVariants: Variants = {
   hidden: {},
   visible: {
     transition: {
@@ -76,7 +76,7 @@ const cardContainerVariants = {
   },
 };
 
-const cardVariant = {
+const cardVariant: Variants = {
   hidden: { opacity: 0, y: 60, scale: 0.95 },
   visible: {
     opacity: 1,

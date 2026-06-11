@@ -1,13 +1,13 @@
 'use client';
 
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
 export default function StoneMarketplace() {
   const [budget, setBudget] = useState(300);
 
   // Animation variants
-  const slideFromLeftVariant = {
+  const slideFromLeftVariant: Variants = {
     hidden: { opacity: 0, x: -100 },
     visible: {
       opacity: 1,
@@ -21,7 +21,7 @@ export default function StoneMarketplace() {
     },
   };
 
-  const slideFromRightVariant = {
+  const slideFromRightVariant: Variants = {
     hidden: { opacity: 0, x: 100 },
     visible: {
       opacity: 1,

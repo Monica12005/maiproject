@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
 const blogs = [
   {
@@ -43,7 +43,7 @@ const blogs = [
 ];
 
 // Heading animation: smooth top to bottom
-const headingVariant = {
+const headingVariant: Variants = {
   hidden: { opacity: 0, y: -50 },
   visible: {
     opacity: 1,
@@ -59,7 +59,7 @@ const headingVariant = {
 
 // Custom dynamic variant for the cards
 // They start completely collapsed in the center of the 3x2 grid and fan out.
-const getCardVariant = (id: number) => {
+const getCardVariant = (id: number): Variants => {
   let delay = 0;
   let duration = 0.9;
   

@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
 const traders = [
   { id: 1, initials: 'DE', name: 'David Evans' },
@@ -32,7 +32,7 @@ export default function WhyChooseMai() {
   }, []);
 
   // Top-to-bottom animation for the heading section
-  const slideDownVariant = {
+  const slideDownVariant: Variants = {
     hidden: { opacity: 0, y: -50 },
     visible: {
       opacity: 1,

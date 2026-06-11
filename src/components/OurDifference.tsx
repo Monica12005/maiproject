@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
 const features = [
   {
@@ -35,7 +35,7 @@ const features = [
 ];
 
 // Heading animation: smooth top to bottom
-const headingVariant = {
+const headingVariant: Variants = {
   hidden: { opacity: 0, y: -60 },
   visible: {
     opacity: 1,
@@ -50,7 +50,7 @@ const headingVariant = {
 };
 
 // Container for the grid, staggers children
-const gridContainerVariant = {
+const gridContainerVariant: Variants = {
   hidden: {},
   visible: {
     transition: {
@@ -61,7 +61,7 @@ const gridContainerVariant = {
 };
 
 // Card animation: start collapsed in the center and fan out to positions
-const cardVariant = {
+const cardVariant: Variants = {
   hidden: (index: number) => {
     // 0: Top-Left, 1: Top-Right, 2: Bottom-Left, 3: Bottom-Right
     const isLeft = index % 2 === 0;
